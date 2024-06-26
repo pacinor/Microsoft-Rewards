@@ -1,5 +1,5 @@
 // ==UserScript==
-// @name         Microsoft Bing Rewards每日任务脚本
+// @name         Microsoft Bing Rewards每日任务脚本-全自动版
 // @version      V3.1.0
 // @description  自动完成微软Rewards每日搜索任务,每次运行时获取抖音/微博/哔哩哔哩/百度热门词,避免使用同样的搜索词被封号。
 // @note         基于怀沙2049的脚本
@@ -17,7 +17,7 @@
 // @grant        GM_setValue
 // @grant        GM_getValue
 // @grant        GM_xmlhttpRequest
-// @namespace    https://greasyfork.org/zh-CN/scripts/477107
+// @namespace    https://pacinor.github.io/Microsoft-Rewards
 // ==/UserScript==
 
 // bing url 国外填https://www.bing.com,国内填https://cn.bing.com
