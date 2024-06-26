@@ -272,12 +272,12 @@ async function exec() {
 
 let gain_points = async () => {
     // 如果已完成或者手动停止 或是手机
-    if(run_data.points_done || run_data.manual_stop || is_phone){
+    if( run_data.manual_stop || is_phone){
         return
     }
     // 等一段时间,页面加载
     await sleep(100000)
-    while (true) {
+    while (!run_data.points_done) {
         // 完成了搜索,在rewards首页,时间在中午12点以后
         let date = new Date()
         if (date.getHours()>12) {
