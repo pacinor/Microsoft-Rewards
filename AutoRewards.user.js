@@ -1,6 +1,6 @@
 // ==UserScript==
 // @name         Microsoft Bing Rewards每日任务脚本-全自动版
-// @version      V3.1.0
+// @version      V3.1.1
 // @description  自动完成微软Rewards每日搜索任务,每次运行时获取抖音/微博/哔哩哔哩/百度热门词,避免使用同样的搜索词被封号。
 // @note         基于怀沙2049的脚本
 // @author       pacinor
@@ -101,7 +101,8 @@ if (time_today != run_data.date && auto_start) {
     // 重置设置,继承前一天的搜索词
     run_data.date = time_today
     run_data.is_fetch_keywords = false
-    run_data.current_source_index = 0
+    // 随机选择一个api,并且预留几个防止访问失败,此处是2个,所以keywords_source长度不能少于2
+    run_data.current_source_index = Math.floor(Math.random() * keywords_source.length-2)
     run_data.points_done = false
     GM_setValue('Cnt', 0); // 如果是新的一天,并且autostart为true,将计数器重置为0
     set_run_data(run_data)
